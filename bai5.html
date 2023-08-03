@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // Khai báo và khởi tạo mảng arrayInt
+        let arrayInt = [10, 25, 7, 15, 30, 50, 5, 40, 20];
+
+        // Nhập vào 2 số nguyên a và b
+        let a = parseInt(prompt("Nhập số nguyên a:"));
+        let b = parseInt(prompt("Nhập số nguyên b:"));
+
+        // Khởi tạo mảng gồm các phần tử nằm giữa a và b
+        let newArray = [];
+        for (var i = 0; i < arrayInt.length; i++) {
+            if (arrayInt[i] > a && arrayInt[i] < b) {
+                newArray.push(arrayInt[i]);
+            }
+        }
+
+        // In mảng mới
+        console.log("Mảng mới gồm các phần tử nằm giữa " + a + " và " + b + ": " + newArray.join(", "));
+    </script>
+</body>
+
+</html>
