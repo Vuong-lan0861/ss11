@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // Khai báo mảng array
+        let array = [];
+
+        // Nhập giá trị cho mảng từ bàn phím
+        while (true) {
+            let inputValue = prompt("Nhập giá trị (nhấn Cancel hoặc để trống để kết thúc):");
+            if (inputValue === null || inputValue === "") {
+                break;
+            }
+            let value = parseFloat(inputValue);
+            if (!isNaN(value)) {
+                array.push(value);
+            } else {
+                console.log("Giá trị không hợp lệ. Vui lòng nhập lại số.");
+            }
+        }
+
+        // Tính tổng các giá trị của mảng
+        let sum = 0;
+        for (var i = 0; i < array.length; i++) {
+            sum += array[i];
+        }
+        console.log("Tổng các giá trị của mảng là: " + sum);
+
+        // Tìm giá trị max và min trong mảng
+        let max = array[0];
+        let min = array[0];
+        for (var i = 1; i < array.length; i++) {
+            if (array[i] > max) {
+                max = array[i];
+            }
+            if (array[i] < min) {
+                min = array[i];
+            }
+        }
+
+        // In phần tử có giá trị max - min
+        console.log("Phần tử có giá trị max - min là: " + (max - min));
+
+    </script>
+</body>
+
+</html>
