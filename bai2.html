@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // Khai báo mảng 2 chiều arrInt
+        let arrInt = [];
+
+        // Nhập giá trị cho mảng từ bàn phím
+        for (var i = 0; i < 3; i++) {
+            arrInt[i] = [];
+            for (var j = 0; j < 3; j++) {
+                var value = parseInt(prompt("Nhập giá trị phần tử thứ [" + i + "][" + j + "]:"));
+                arrInt[i][j] = value;
+            }
+        }
+
+        // In giá trị các phần tử của mảng
+        console.log("Các giá trị của mảng là:");
+        for (var i = 0; i < arrInt.length; i++) {
+            console.log(arrInt[i].join(", "));
+        }
+        // In giá trị các phần tử nằm trên đường biên
+        console.log("Các giá trị nằm trên đường biên là:");
+        for (var i = 0; i < arrInt.length; i++) {
+            for (var j = 0; j < arrInt[i].length; j++) {
+                if (i === 0 || i === arrInt.length - 1 || j === 0 || j === arrInt[i].length - 1) {
+                    console.log(arrInt[i][j]);
+                }
+            }
+        }
+
+        // In giá trị các phần tử nằm trên đường chéo chính và phụ
+        console.log("Các giá trị nằm trên đường chéo chính là:");
+        for (var i = 0; i < arrInt.length; i++) {
+            console.log(arrInt[i][i]);
+        }
+        console.log("Các giá trị nằm trên đường chéo phụ là:");
+        for (var i = 0; i < arrInt.length; i++) {
+            console.log(arrInt[i][arrInt[i].length - 1 - i]);
+        }
+
+        // Sắp xếp mảng tăng dần theo dòng
+        for (var i = 0; i < arrInt.length; i++) {
+            arrInt[i].sort(function (a, b) {
+                return a - b;
+            });
+        }
+
+        // In mảng sau khi sắp xếp tăng dần theo dòng
+        console.log("Mảng sau khi sắp xếp tăng dần theo dòng:");
+        for (var i = 0; i < arrInt.length; i++) {
+            console.log(arrInt[i].join(", "));
+        }
+    </script>
+</body>
+
+</html>
