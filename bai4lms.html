@@ -13,10 +13,28 @@
         for (let i = 0; i < 5; i++) {
             array.push(i)
         }
+        // Với mỗi lần chạy sử dụng phương thức push() để thêm phần tử đó vào mảng array ban đầu
         console.log("Su dung push()", array);
+
         let array1 = 10;
         array.unshift(array1);
-        console.log(array);
+        // thêm các phần tử của array1 và đầu của mảng array
+        console.log("unshift()", array);
+        // xóa phần tử cuối mảng array ban đầu
+        array.pop();
+        console.log("pop()", array);
+        // xóa phần tử đầu mảng array ban đầu
+        array.shift();
+        console.log("shift()", array);
+        // xóa 1 hoặc nhiều phần tử trong mảng array ban đầu:cú pháp array.splice(vị trí index, số lượng phần tử muốn xóa)
+        array.splice(1,1);
+        console.log("splice()",array);
+
+
+
+
+
+
 
     </script>
 </body>
